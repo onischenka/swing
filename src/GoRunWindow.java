@@ -11,8 +11,8 @@ public class GoRunWindow {
 //		new MyGridLayout();
 //		new MyJLayeredPane();
 //		new LaunchPage(); //create new window
-		new MyJOption(); 
-		
+//		new MyJOption(); 
+		new MyTextBox();
 	}
 
 }
