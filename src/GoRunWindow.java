@@ -12,7 +12,11 @@ public class GoRunWindow {
 //		new MyJLayeredPane();
 //		new LaunchPage(); //create new window
 //		new MyJOption(); 
-		new MyTextBox();
+//		new MyTextBox();
+//		new MyJCheckBox();
+//		new MyJComboBox();
+//		new MyJSlider();
+		new MyJProgressBar();
 	}
 
 }
