@@ -16,7 +16,14 @@ public class GoRunWindow {
 //		new MyJCheckBox();
 //		new MyJComboBox();
 //		new MyJSlider();
-		new MyJProgressBar();
+//		new MyJProgressBar();
+//		new MyJMenuBar();
+//		new MyJFileChooser();
+//		new MyJColorChooser();
+//		new MyKeyListener();
+//		new MyMouseListener();
+//		new MyDrag();
+		new MyGame();
 	}
 
 }
