@@ -23,7 +23,8 @@ public class GoRunWindow {
 //		new MyKeyListener();
 //		new MyMouseListener();
 //		new MyDrag();
-		new MyGame();
+//		new MyGame();
+		new MyGraphics();
 	}
 
 }
