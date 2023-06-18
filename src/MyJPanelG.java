@@ -5,16 +5,27 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
-public class MyJPanelG extends JPanel {
+public class MyJPanelG extends JPanel implements ActionListener{
 	Graphics2D g2D;
 	Image image;
+	Timer timer;
+	int startrAngle = 180;
+	int endAngle = 0;
+	
 	MyJPanelG(){
 		image = new ImageIcon("rocket.png").getImage();
 		this.setPreferredSize(new Dimension(500,500));
+		
+		timer = new Timer(1,this);
+		timer.start();
+		
 	}
 	
 	public void paint(Graphics g) {
@@ -51,22 +62,33 @@ public class MyJPanelG extends JPanel {
 	}
 	
 	public void drawCircle() {
-		int angle = 0;
+//		if(angle<= -360) {
+//			g2D.setPaint(Color.yellow);		
+//		}
 		
-				
-		while(angle<=180) {
+		g2D.drawArc(350, 350, 100, 100, 0, endAngle);
+		g2D.fillArc(350, 350, 100, 100, 0, endAngle);
+		
+		g2D.setPaint(Color.yellow);	
+		
+		g2D.drawArc(350, 350, 100, 100, startrAngle, 180);
+		g2D.fillArc(350, 350, 100, 100, startrAngle, 180);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+//		while(angle<=180) {		
+//				
+//				angle++;
+//		}
+//		if(endAngle!=180) {
+//			endAngle++;
+//		}
+		endAngle++;
+		startrAngle--;
 		
 		
-			try {
-				Thread.sleep(0);
-				g2D.drawArc(350, 350, 100, 100, 0, angle);
-				g2D.fillArc(350, 350, 100, 100, 0, angle);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		
-			angle++;
-		}
+		repaint();
 	}
 }

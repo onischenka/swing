@@ -25,6 +25,7 @@ public class GoRunWindow {
 //		new MyDrag();
 //		new MyGame();
 		new MyGraphics();
+//		new My2DAnimation();
 	}
 
 }
